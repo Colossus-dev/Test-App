@@ -25,17 +25,17 @@ docker compose exec app php artisan migrate --seed
 ### 3. Доступ к API
 
 API доступно по адресу:
-`http://localhost:8080/`
+`http://localhost:8000/api/`
 
 ---
 
 ## Маршруты
 
-* `GET /orders` — список заказов
-* `GET /orders/{id}` — детали заказа
-* `POST /orders` — создать заказ
-* `PUT /orders/{id}/status` — изменить статус
-* `DELETE /orders/{id}` — удалить заказ
+* `GET /api/orders` — список заказов
+* `GET /api/orders/{id}` — детали заказа
+* `POST /api/orders` — создать заказ
+* `PUT /api/orders/{id}/status` — изменить статус
+* `DELETE /api/orders/{id}` — удалить заказ
 
 ---
 
@@ -44,19 +44,19 @@ API доступно по адресу:
 Список заказов:
 
 ```bash
-curl http://localhost:8080/orders
+curl http://localhost:8000/api/orders
 ```
 
 Детали заказа:
 
 ```bash
-curl http://localhost:8080/orders/1
+curl http://localhost:8000/api/orders/1
 ```
 
 Создать заказ:
 
 ```bash
-curl -X POST http://localhost:8080/orders \
+curl -X POST http://localhost:8000/api/orders \
   -H "Content-Type: application/json" \
   -d '{
     "user_id": 1,
@@ -70,7 +70,7 @@ curl -X POST http://localhost:8080/orders \
 Изменить статус:
 
 ```bash
-curl -X PUT http://localhost:8080/orders/1/status \
+curl -X PUT http://localhost:8000/api/orders/1/status \
   -H "Content-Type: application/json" \
   -d '{"status": "processed"}'
 ```
@@ -78,7 +78,7 @@ curl -X PUT http://localhost:8080/orders/1/status \
 Удалить заказ:
 
 ```bash
-curl -X DELETE http://localhost:8080/orders/1
+curl -X DELETE http://localhost:8000/api/orders/1
 ```
 
 ---
