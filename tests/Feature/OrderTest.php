@@ -10,6 +10,8 @@ use Tests\TestCase;
 
 class OrderTest extends TestCase
 {
+    use RefreshDatabase;
+
     public function test_order_creation_and_retrieval() {
         $user = User::factory()->create();
         $products = Product::factory()->count(2)->create();
