@@ -9,7 +9,7 @@
 ### 1. Клонирование
 
 ```bash
-git clone https://github.com/<your-account>/<repo>.git
+git clone https://github.com/Colossus-dev/Test-App.git
 cd <repo>
 ```
 
