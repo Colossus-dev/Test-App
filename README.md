@@ -56,15 +56,7 @@ curl http://localhost:8000/api/orders/1
 Создать заказ:
 
 ```bash
-curl.exe -X POST http://localhost:8000/api/orders \
-  -H "Content-Type: application/json" \
-  -d '{
-    "user_id": 1,
-    "items": [
-      {"product_id": 2, "quantity": 1},
-      {"product_id": 3, "quantity": 2}
-    ]
-  }'
+curl.exe -X POST "http://127.0.0.1:8000/api/orders" --header "Content-Type: application/json" --header "Accept: application/json" --data-binary '{"user_id":4,"products":[{"id":6,"quantity":1},{"id":8,"quantity":2}]}'
 ```
 
 Изменить статус:
