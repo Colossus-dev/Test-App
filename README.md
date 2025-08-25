@@ -56,7 +56,7 @@ curl http://localhost:8000/api/orders/1
 Создать заказ:
 
 ```bash
-curl -X POST http://localhost:8000/api/orders \
+curl.exe -X POST http://localhost:8000/api/orders \
   -H "Content-Type: application/json" \
   -d '{
     "user_id": 1,
@@ -70,7 +70,7 @@ curl -X POST http://localhost:8000/api/orders \
 Изменить статус:
 
 ```bash
-curl -X PUT http://localhost:8000/api/orders/1/status \
+curl.exe -X PUT http://localhost:8000/api/orders/1/status \
   -H "Content-Type: application/json" \
   -d '{"status": "processed"}'
 ```
